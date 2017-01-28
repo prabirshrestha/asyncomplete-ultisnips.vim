@@ -14,7 +14,7 @@ if has('python3')
 endif
 ```
 
-### Installing
+#### Registration
 
 ```vim
 if has('python3')
