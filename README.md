@@ -1,4 +1,4 @@
-ultisnips source for asyncomplete.vim
+UltiSnips source for asyncomplete.vim
 =====================================
 
 Provide [Ultisnips](https://github.com/SirVer/ultisnips) autocompletion source for [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
@@ -18,6 +18,7 @@ endif
 
 ```vim
 if has('python3')
+    let g:UltiSnipsExpandTrigger="<c-e>"
     call asyncomplete#register_source({
         \ 'name': 'ultisnips',
         \ 'whitelist': ['*'],
@@ -25,6 +26,8 @@ if has('python3')
         \ })
 endif
 ```
+
+Note: If you are using `tab` in asyncomplete.vim make sure to change the `g:UltiSnipsExpandTrigger` to something else besides `tab` to avoid conflicts.
 
 ### Credits
 All the credit goes to the following projects
