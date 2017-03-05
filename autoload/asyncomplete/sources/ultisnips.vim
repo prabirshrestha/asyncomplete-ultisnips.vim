@@ -1,3 +1,7 @@
+function! asyncomplete#sources#ultisnips#get_source_options(opts)
+    return a:opts
+endfunction
+
 function! asyncomplete#sources#ultisnips#completor(opt, ctx)
     let l:snips = UltiSnips#SnippetsInCurrentScope()
 
