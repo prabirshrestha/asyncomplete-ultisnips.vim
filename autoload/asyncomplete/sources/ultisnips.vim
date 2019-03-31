@@ -13,7 +13,7 @@ function! asyncomplete#sources#ultisnips#completor(opt, ctx)
     let l:col = a:ctx['col']
     let l:typed = a:ctx['typed']
 
-    let l:kw = matchstr(l:typed, '\v\S+$')
+    let l:kw = matchstr(l:typed, '\w\+$')
     let l:kwlen = len(l:kw)
 
     let l:matches = map(keys(l:snips),'{"word":v:val,"dup":1,"icase":1,"menu": "Snips: " . l:snips[v:val]}')
