@@ -1,7 +1,7 @@
 function! asyncomplete#sources#ultisnips#get_source_options(opts)
     let l:defaults={'name': 'ultisnips',
                 \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-                \ 'whitelist': ['*']}
+                \ 'allowlist': ['*']}
     return extend(l:defaults, a:opts)
 endfunction
 
